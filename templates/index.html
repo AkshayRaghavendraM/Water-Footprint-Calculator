@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Footprint Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Water Footprint Calculator</h1>
+        <form id="calculator-form" method="POST" action="/predict">
+            <label for="product">Product:</label>
+            <select name="Product" id="product" required>
+                <option value="Wheat">Wheat</option>
+                <option value="Rice">Rice</option>
+                <option value="Corn">Corn</option>
+                <option value="Tomatoes">Tomatoes</option>
+                <option value="Almonds">Almonds</option>
+            </select>
+            
+            <label for="quantity">Quantity (kg):</label>
+            <input type="number" name="Quantity" id="quantity" required min="1">
+
+            <label for="region">Region:</label>
+            <select name="Region" id="region" required>
+                <option value="North America">North America</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Africa">Africa</option>
+                <option value="South America">South America</option>
+            </select>
+
+            <label for="method">Production Method:</label>
+            <select name="Production Method" id="method" required>
+                <option value="Organic">Organic</option>
+                <option value="Conventional">Conventional</option>
+            </select>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <!-- Display the result if it exists -->
+        {% if result %}
+        <div id="result">
+            <h2>Estimated Water Footprint: {{ result }} liters</h2>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

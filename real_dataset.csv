@@ -1,0 +1,16 @@
+Product,Quantity,Region,Production Method,Water Footprint
+Wheat,100,North America,Organic,1827
+Rice,100,Asia,Organic,2497
+Corn,100,North America,Conventional,1222
+Tomatoes,100,Europe,Conventional,214
+Almonds,100,North America,Organic,10917
+Wheat,50,Europe,Conventional,913.5
+Rice,50,Africa,Organic,1248.5
+Corn,50,South America,Conventional,611
+Tomatoes,50,Asia,Organic,107
+Almonds,50,Asia,Conventional,5458.5
+Wheat,200,Asia,Conventional,3654
+Rice,200,Europe,Organic,4994
+Corn,200,Africa,Organic,2444
+Tomatoes,200,North America,Conventional,428
+Almonds,200,South America,Organic,21834
